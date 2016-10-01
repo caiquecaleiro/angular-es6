@@ -2,7 +2,7 @@
   "name": "angular-es6",
   "version": "1.0.0",
   "description": "A project to apply ES6 on Angular.",
-  "main": "webpack.config.js",
+  "main": "app.module.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server"
@@ -19,7 +19,9 @@
   "homepage": "https://github.com/caiquecaleiro/angular-es6#readme",
   "dependencies": {
     "angular": "^1.5.8",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "file-loader": "^0.9.0",
+    "url-loader": "^0.5.7"
   },
   "devDependencies": {
     "babel-core": "^6.16.0",
