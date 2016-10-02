@@ -1,5 +1,5 @@
 import MainPanelController from './mainPanel.controller';
-import  configRoute  from './config.route';
+import configRoute from './config.route';
 
 export default angular
   .module('app.mainPanel', [])

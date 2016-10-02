@@ -1,6 +1,5 @@
-configRoute.$inject = ['$stateProvider'];
-
-export default function configRoute($stateProvider) {
+/* @ngInject */
+function configRoute($stateProvider) {
   $stateProvider
     .state('mainPanel', {
       url: '/',
@@ -9,3 +8,5 @@ export default function configRoute($stateProvider) {
       controllerAs: 'vm'
     });
 }
+
+export default configRoute;

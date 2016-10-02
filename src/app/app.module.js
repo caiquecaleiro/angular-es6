@@ -1,12 +1,14 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
-import mainPanel from './mainPanel/mainPanel.module'
+import mainPanel from './mainPanel/mainPanel.module';
+import about from './about/about.module';
 
 angular
   .module('app', [
     uiRouter,
-    mainPanel.name
+    mainPanel.name,
+    about.name
   ])
   .config(configFunction);
 
