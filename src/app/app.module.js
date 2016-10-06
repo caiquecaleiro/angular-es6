@@ -1,19 +1,16 @@
 import angular from 'angular';
-import uiRouter from 'angular-ui-router';
 
-import mainPanel from './mainPanel/mainPanel.module';
-import about from './about/about.module';
+import core from './core/core.module';
+import landing from './landing/landing.module';
 
 angular
   .module('app', [
-    uiRouter,
-    mainPanel.name,
-    about.name
+    core,
+    landing
   ])
   .config(configFunction);
 
-configFunction.$inject = ['$urlRouterProvider', '$locationProvider'];
-
-function configFunction($urlRouterProvider, $locationProvider) {
+/*@ngInject*/
+function configFunction($urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
 }
