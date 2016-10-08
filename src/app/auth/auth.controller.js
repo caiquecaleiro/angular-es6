@@ -24,7 +24,7 @@ class AuthController {
    */
   login(user) {
     return this.authService.login(user)
-      .then(() => this.$state.go('mainList'))
+      .then(() => this.$state.go('landing'))
       .catch(error => this.error = error);
   }
 }

@@ -1,8 +1,10 @@
+import firebase from 'firebase';
+
 class AuthService {
   /*@ngInject*/
-  constructor($firebaseAuth, firebaseDataService) {
-    this.$firebaseAuth = $firebaseAuth;
+  constructor(firebaseDataService) {
     this.firebaseDataService = firebaseDataService;
+    this.auth = firebase.auth();
   }
 
   /**
@@ -11,7 +13,7 @@ class AuthService {
    * @param {object} user - The user to perform the sign in.
    */
   register(user) {
-    return this.firebaseAuthObject.$createUserWithEmailAndPassword(user.email, user.password);
+    return this.auth.createUserWithEmailAndPassword(user.email, user.password);
   }
 
   /**
@@ -19,21 +21,21 @@ class AuthService {
    * @param {object} user - The user to perform the login.
    */
   login(user) {
-    return this.firebaseAuthObject.$signInWithEmailAndPassword(user.email, user.password);
+    return this.auth.signInWithEmailAndPassword(user.email, user.password);
   }
 
   /**
    * Performs the logout action.
    */
   logout() {
-    return this.firebaseAuthObject.$signOut();
+    return this.auth.signOut();
   }
 
   /**
    * Returns whether the user is logged in or not.
    */
   isLoggedIn() {
-    return this.firebaseAuthObject.$getAuth();
+    return this.auth.getAuth();
   }
 }
 
