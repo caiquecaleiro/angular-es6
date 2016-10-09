@@ -15,7 +15,7 @@ class AuthForm {
 
 class AuthFormController {
   constructor() {
-    this.vm = {
+    this.user = {
       email: '',
       password: ''
     };
